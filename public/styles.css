@@ -65,6 +65,10 @@ input:hover, input:focus {
 input[name="quote"] {
   width: 400px;
 }
+.errorAdd {
+  margin-top: 5px;
+  color: #EF5350;
+}
 
 .quote div > span:first-child {
   font-weight: bold
