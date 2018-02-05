@@ -9,3 +9,7 @@
 
 1. run `npm run dev`
 2. Navigate to `localhost:3000`
+
+## Tests
+
+1. run `npm test`
