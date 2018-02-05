@@ -25,9 +25,9 @@
           <form action="/update" method="POST" class="updateForm">
             <input type="hidden" value="<%= quotes[i].name %>" name="name">
             <input type="hidden" value="<%= quotes[i].quote %>" name="quote">
-            <input type="text" value="<%= quotes[i].name %>" name="newName">
-            <input type="text" value="<%= quotes[i].quote %>" name="newQuote">
-            <button type="submit">Modifier</button>
+            <input class="updateName" type="text" value="<%= quotes[i].name %>" name="newName">
+            <input class="updateQuote" type="text" value="<%= quotes[i].quote %>" name="newQuote">
+            <button class="updateSubmit" type="submit">Modifier</button>
             <a class="delete" name="<%= quotes[i].name %>" quote="<%= quotes[i].quote %>" onclick="onDeleteQuote(this)">Supprimer</a>
             </form>
         </li>
