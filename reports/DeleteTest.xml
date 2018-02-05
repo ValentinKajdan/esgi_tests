@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="DeleteTest"
+    errors="1" failures="0" hostname="" id="" package="DeleteTest" skipped="0"
+    tests="1" time="0.007000" timestamp="Mon, 05 Feb 2018 12:49:50 GMT">
+  
+    <testcase name="Delete a quote" classname="DeleteTest" time="0.007000" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Delete Test / Delete a quote]:
+
+  TypeError: client.url(...).waitForElementVisible(...).elements(...).pause(...).expect.element(...).to.be.present.click is not a function
+    at Object.Delete a quote (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\test\tests\DeleteTest.js:14:8)
+    at Module.call (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\nightwatch\lib\runner\module.js:62:34)
+    at C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\nightwatch\lib\runner\testcase.js:70:29
+    at _fulfilled (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\q\q.js:834:54)
+    at self.promiseDispatch.done (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\q\q.js:863:30)
+    at Promise.promise.promiseDispatch (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\q\q.js:796:13)
+    at C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\q\q.js:556:49
+    at runSingle (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\q\q.js:137:13)
+    at flush (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\node_modules\q\q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
