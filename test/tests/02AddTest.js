@@ -8,7 +8,6 @@ module.exports = {
       .setValue('.addName', 'Author')
       .setValue('.addQuoteText', 'Quote')
       .click('.addSubmit')
-      .pause(2000)
       .assert.containsText('.quote:last-child div span:first-child', 'Author')
       .assert.containsText('.quote:last-child div span:nth-child(2)', 'Quote')
 
@@ -21,7 +20,6 @@ module.exports = {
       .waitForElementVisible('body', 1000)
       .setValue('.addQuoteText', 'quote')
       .click('.addSubmit')
-      .pause(2000)
       .waitForElementVisible('.errorAdd', 1000)
       .assert.containsText('.errorAdd', 'Vous devez remplir tous les champs')
 
@@ -34,7 +32,6 @@ module.exports = {
       .waitForElementVisible('body', 1000)
       .setValue('.addName', 'Author')
       .click('.addSubmit')
-      .pause(2000)
       .waitForElementVisible('.errorAdd', 1000)
       .assert.containsText('.errorAdd', 'Vous devez remplir tous les champs')
 
@@ -46,7 +43,6 @@ module.exports = {
       .url('http://localhost:3000')
       .waitForElementVisible('body', 1000)
       .click('.addSubmit')
-      .pause(2000)
       .waitForElementVisible('.errorAdd', 1000)
       .assert.containsText('.errorAdd', 'Vous devez remplir tous les champs')
 
