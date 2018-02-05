@@ -42,8 +42,8 @@
       <h2>Ajouter une citation</h2>
 
       <form action="/quotes" method="POST" class="addQuote">
-        <input type="text" placeholder="nom" name="name">
-        <input type="text" placeholder="citation" name="quote">
+        <input type="text" placeholder="Nom" name="name">
+        <input type="text" placeholder="Citation" name="quote">
         <button type="submit">Envoyer</button>
         <% if (error && error == 'add') { %>
           <div class="errorAdd">Vous devez remplir tous les champs</div>

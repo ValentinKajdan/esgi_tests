@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="quoteJS"
+    errors="0" failures="0" hostname="" id="" package="quoteJS" skipped="0"
+    tests="1" time="3.954" timestamp="Mon, 05 Feb 2018 09:49:17 GMT">
+  
+    <testcase name="The website is launched" classname="quoteJS" time="3.954" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
