@@ -19,34 +19,48 @@ app.use(bodyParser.json())
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
+  var error = false;
+  if (req.param('error')) {
+    error = req.param('error') == 'add' ? 'add' : 'update';
+  }
   db.collection('quotes').find().toArray((err, result) => {
     if (err) return console.log(err)
-    res.render('index.ejs', {quotes: result})
+    res.render('index.ejs', {quotes: result, error: error})
   })
 })
 
 app.post('/quotes', (req, res) => {
-  db.collection('quotes').save(req.body, (err, result) => {
-    if (err) return console.log(err)
-    console.log('saved to database')
-    res.redirect('/')
-  })
+  if (req.body.name && req.body.quote) {
+    db.collection('quotes').save(req.body, (err, result) => {
+      if (err) return console.log(err)
+      console.log('saved to database')
+      res.redirect('/')
+    })
+  } else {
+    console.log('no data')
+    res.redirect('/?error=add')
+  }
 })
 
 app.post('/update', (req, res) => {
-  db.collection('quotes')
-  .findOneAndUpdate({name: req.body.name, quote: req.body.quote, }, {
-    $set: {
-      name: req.body.newName,
-      quote: req.body.newQuote
-    }
-  }, {
-    sort: {_id: -1},
-    upsert: true
-  }, (err, result) => {
-    if (err) return res.send(err)
-    res.redirect('/')
-  })
+  console.log(req.body);
+  if (req.body.newName !== '' && req.body.newQuote !== '') {
+    db.collection('quotes')
+    .findOneAndUpdate({name: req.body.name, quote: req.body.quote, }, {
+      $set: {
+        name: req.body.newName,
+        quote: req.body.newQuote
+      }
+    }, {
+      sort: {_id: -1},
+      upsert: true
+    }, (err, result) => {
+      if (err) return res.send(err)
+      res.redirect('/')
+    })
+  } else {
+    res.redirect('/?error=update')
+  }
 })
 
 app.delete('/quotes', (req, res) => {
