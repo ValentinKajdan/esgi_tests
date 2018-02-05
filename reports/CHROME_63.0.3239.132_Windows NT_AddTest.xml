@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="4">
+
+  <testsuite name="AddTest"
+    errors="0" failures="0" hostname="" id="" package="AddTest" skipped="0"
+    tests="4" time="23.38" timestamp="Mon, 05 Feb 2018 10:47:07 GMT">
+  
+    <testcase name="Add a quote without errors" classname="AddTest" time="6.439" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Add a quote without name" classname="AddTest" time="5.623" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Add a quote without quote" classname="AddTest" time="5.699" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Add a quote without fill the two inputs" classname="AddTest" time="5.616" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

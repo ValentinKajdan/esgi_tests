@@ -19,9 +19,10 @@
       <ul class="quotes">
       <% for(var i=0; i<quotes.length; i++) {%>
         <li class="quote">
-          <div class="">
-            <span><%= quotes[i].name %></span>
-            <span><%= quotes[i].quote %></span></div>
+          <div class="quoteContent">
+            <span class="quoteAuthor"><%= quotes[i].name %></span>
+            <span class="quoteText"><%= quotes[i].quote %></span>
+          </div>
           <form action="/update" method="POST" class="updateForm">
             <input type="hidden" value="<%= quotes[i].name %>" name="name">
             <input type="hidden" value="<%= quotes[i].quote %>" name="quote">
@@ -42,9 +43,9 @@
       <h2>Ajouter une citation</h2>
 
       <form action="/quotes" method="POST" class="addQuote">
-        <input type="text" placeholder="Nom" name="name">
-        <input type="text" placeholder="Citation" name="quote">
-        <button type="submit">Envoyer</button>
+        <input type="text" placeholder="Nom" name="name" class="addName">
+        <input type="text" placeholder="Citation" name="quote" class="addQuoteText">
+        <button type="submit" class="addSubmit">Envoyer</button>
         <% if (error && error == 'add') { %>
           <div class="errorAdd">Vous devez remplir tous les champs</div>
         <% } %>
