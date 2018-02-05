@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Tests ESGI</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 </head>
 <body>
   <header>
@@ -28,8 +29,11 @@
             <input type="text" value="<%= quotes[i].quote %>" name="newQuote">
             <button type="submit">Modifier</button>
             <a class="delete" name="<%= quotes[i].name %>" quote="<%= quotes[i].quote %>" onclick="onDeleteQuote(this)">Supprimer</a>
-              </form>
+            </form>
         </li>
+      <% } %>
+      <% if (error && error == 'update') { %>
+        <div class="errorAdd">Vous devez remplir tous les champs</div>
       <% } %>
       </ul>
     </div>
@@ -38,9 +42,12 @@
       <h2>Ajouter une citation</h2>
 
       <form action="/quotes" method="POST" class="addQuote">
-        <input type="text" placeholder="nom" name="name">
-        <input type="text" placeholder="citation" name="quote">
+        <input type="text" placeholder="Nom" name="name">
+        <input type="text" placeholder="Citation" name="quote">
         <button type="submit">Envoyer</button>
+        <% if (error && error == 'add') { %>
+          <div class="errorAdd">Vous devez remplir tous les champs</div>
+        <% } %>
       </form>
     </div>
 
