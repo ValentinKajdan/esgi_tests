@@ -28,7 +28,16 @@ Feature: Scenarios CRUD
 	Alors je reçois un message d'erreur
 	Et ma citation n'est pas créer
 
-	Scenario 4 : Update quotes
+	Scenario 4 : Add quotes (Error name + quote)
+
+	Etant donné que je suis un utilisateur
+	Lorsque je me rend sur la section "Ajouter une citation"
+	Et que je ne rempli aucun  champs du formulaire
+	Et que je valide le formulaire 
+	Alors je reçois un message d'erreur
+	Et ma citation n'est pas créer
+
+	Scenario 5 : Update quotes
 
 	Etant donné que je suis un utilisateur
 	Lorsque je me rend sur la "Liste des citations"
@@ -39,7 +48,7 @@ Feature: Scenarios CRUD
 	Et je peux la voir sur la "Liste des citations"
 
 
-	Scenario 5 : Update quotes(Error name)
+	Scenario 6 : Update quotes (Error name)
 
 	Etant donné que je suis un utilisateur
 	Lorsque je me rend sur la "Liste descitations"
@@ -49,7 +58,7 @@ Feature: Scenarios CRUD
 	Alors je reçois un message d'erreur
 	Et ma citation n'est pas modifier 
 
-	Scenario 6 : Update quotes(Error quotes)
+	Scenario 7 : Update quotes (Error quotes)
 
 	Etant donné que je suis un utilisateur
 	Lorsque je me rend sur la "Liste descitations"
@@ -57,10 +66,20 @@ Feature: Scenarios CRUD
 	Et que je laisse vide le champs "Citations" du formulaire 
 	Et que je valide le formulaire
 	Alors je reçois un message d'erreur
+	Et ma citation n'est pas modifier
+
+	Scenario 8 : Update quotes (Error name + quotes)
+
+	Etant donné que je suis un utilisateur
+	Lorsque je me rend sur la "Liste descitations"
+	Et que je choisi une citation
+	Et que je laisse vide tous les champs du formulaire 
+	Et que je valide le formulaire
+	Alors je reçois un message d'erreur
 	Et ma citation n'est pas modifier 
 
 
-	Scenario 6 : Delete quotes
+	Scenario 7 : Delete quotes
 
 	Etant donné que je suis un utilisateur
 	Lorsque je me rend sur la "Liste des citations"
