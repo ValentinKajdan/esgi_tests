@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="4">
+
+  <testsuite name="UpdateTest"
+    errors="0" failures="1" hostname="" id="" package="UpdateTest" skipped="2"
+    tests="4" time="9.576" timestamp="Mon, 05 Feb 2018 12:05:38 GMT">
+  
+    <testcase name="Update work with normal use" classname="UpdateTest" time="4.504" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Update display error without quote" classname="UpdateTest" time="5.072" assertions="5">
+
+    
+
+    
+
+    
+
+      <failure message="Timed out while waiting for element &lt;.errorUpdate&gt; to be present for 1000 milliseconds.">    at Object.Update display error without quote (C:\Users\val\Documents\COURS\4e_annee\unit_tests\finalv2\test\tests\UpdateTest.js:26:7)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+    
+    <testcase
+      name="Update display error without name" classname="UpdateTest">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Update display error without quote and name" classname="UpdateTest">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
